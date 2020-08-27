@@ -23,22 +23,22 @@ if (isset($_POST['envoyer'])) { ?>
             </tr>
         </tbody>
     </table>
+
     </html>
 
-    <?php
-    }
-    else if (($_POST['vendre'])){
-        header('Location: vendre.html');  
-        header('Location: louer.html');  
-    }
-        ?>
+<?php
+} else if (($_POST['vendre'])) {
+    header('Location: vendre.html');
+    header('Location: louer.html');
+}
+?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
 
-    <form method="POST" action="contact.php">
+    <form method="POST" action="index.php">
         <div>
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom">
@@ -66,9 +66,9 @@ if (isset($_POST['envoyer'])) { ?>
         </br>
         <div class="button">
             <input type="submit" name="envoyer">
-         
 
-       
+
+
     </form>
 
 </html>
