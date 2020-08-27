@@ -28,7 +28,7 @@ create table acheter (
 
 -- table louer
 drop table if exists louer;
-create table vendre (
+create table louer (
 	lo_id int not null auto_increment primary key,
 	lo_type varchar(50),
 	lo_caracteristique varchar(50),
@@ -39,9 +39,11 @@ create table vendre (
 drop table if exists contact;
 create table contact (
 	co_id int not null auto_increment primary key,
-	co_type varchar(50),
-	co_caracteristique varchar(50),
-    co_adresse varchar(50)
+    co_nom varchar(50),
+	co_prenom varchar(50),
+	co_adresse varchar(50),
+    co_ville varchar(50),
+    co_CP int 
 )engine=innodb;
 
 set foreign_key_checks =1;
