@@ -8,36 +8,40 @@ use baseagence;
 
 set foreign_key_checks =0;
 
--- table avion
-drop table if exists avion;
-create table avion (
-	av_id int not null auto_increment primary key,
-	av_const varchar(20),
-	av_modele varchar(10),
-	av_capacite int,
-	av_site int not null
+-- table vendre
+drop table if exists vendre;
+create table vendre (
+	ve_id int not null auto_increment primary key,
+	ve_type varchar(50),
+	ve_caracteristique varchar(50),
+    ve_adresse varchar(100)
 )engine=innodb;
 
--- table pilote
-drop table if exists pilote;
-create table pilote (
-	pi_id int not null auto_increment primary key,
-	pi_nom varchar(20),
-	pi_site int not null
+-- table acheter
+drop table if exists acheter;
+create table acheter (
+	ac_id int not null auto_increment primary key,
+	ac_type varchar(50),
+	ac_caracteristique varchar(50),
+    ac_adresse varchar(100)
 )engine=innodb;
 
--- table vol
-drop table if exists vol;
-create table vol (
-	vo_id char(5) not null unique ,
-	vo_avion int not null,
-	vo_pilote int not null ,
-	vo_site_depart int not null,
-	vo_site_arrivee int not null,
-	vo_heure_depart time,
-	vo_heure_arrivee time
-)engine=innodb; 
+-- table louer
+drop table if exists louer;
+create table vendre (
+	lo_id int not null auto_increment primary key,
+	lo_type varchar(50),
+	lo_caracteristique varchar(50),
+    lo_adresse varchar(100)
+)engine=innodb;
 
--
+-- table contact
+drop table if exists contact;
+create table contact (
+	co_id int not null auto_increment primary key,
+	co_type varchar(50),
+	co_caracteristique varchar(50),
+    co_adresse varchar(50)
+)engine=innodb;
 
 set foreign_key_checks =1;
