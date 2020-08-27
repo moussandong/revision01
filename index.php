@@ -1,13 +1,13 @@
 <?php
 
 if (isset($_POST['vendre']))
-    header('Location: vendre.html');
+    header('Location: vendre.php');
 if (isset($_POST['acheter']))
-    header('Location: acheter.html');
+    header('Location: acheter.php');
 if (isset($_POST['louer']))
-    header('Location: louer.html');
+    header('Location: louer.php');
 if (isset($_POST['contact']))
-    header('Location: louer.html');
+    header('Location: contact.php');
 if (isset($_POST['accueil']))
     header('Location: accueil.html');
 ?>
@@ -18,6 +18,7 @@ if (isset($_POST['accueil']))
 <!DOCTYPE html>
 <html>
 <form method="POST" action="index.php">
+<title>Accueil Agence </title>
     <table>
         <thead>
             <tr>

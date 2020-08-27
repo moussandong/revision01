@@ -27,10 +27,15 @@ if (isset($_POST['envoyer'])) { ?>
     </html>
 
 <?php
-} else if (($_POST['vendre'])) {
-    header('Location: vendre.html');
-    header('Location: louer.html');
+} else {
+    $nom = "";
+    $prenom = "";
+    $adresse = "";
+    $ville = "";
+    $CodePostal = 0;
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -39,36 +44,34 @@ if (isset($_POST['envoyer'])) { ?>
 <head>
 
     <form method="POST" action="index.php">
-        <div>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom">
-        </div>
-        </br>
-        <div>
-            <label for="prenom">prenom :</label>
-            <input type="text" id="nom" name="prenom">
-        </div>
-        </br>
-        <div>
-            <label for="adresse">Adresse :</label>
-            <input type="text" id="adresse" name="adresse">
-        </div>
-        </br>
-        <div>
-            <label for="ville">ville :</label>
-            <input type="text" id="ville" name="ville">
-        </div>
-        </br>
-        <div>
-            <label for="CodePostal">code postal :</label>
-            <input type="number" id="CodePostal" name="CodePostal">
-        </div>
-        </br>
-        <div class="button">
-            <input type="submit" name="envoyer">
+        <p>
+            <label for="nom">nom</label>
+            <input type="text" id="nom" name="nom" value="<?php echo $nom ?>" />
+        </p>
+
+        <p>
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="prenom" value="<?php echo $prenom ?>" />
+        </p>
+        <p>
+            <label for="adresse">Adresse</label>
+            <input type="text" id="adresse" name="adresse" value="<?php echo $adresse ?>" />
+        </p>
+
+        <p>
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="ville" value="<?php echo $ville ?>" />
+        </p>
+
+        <p>
+            <label for="CodePostal">Code postal</label>
+            <input type="number" id="CodePostal" name="CodePostal" value="<?php echo $CodePostal ?>" />
+        </p>
 
 
 
+        <input type="submit" name="btSubmit" value="Envoyer" />
     </form>
+    </body>
 
 </html>
